@@ -6,10 +6,20 @@
         <title>JR GitHub Page</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .box{
+                border: lightgrey solid 1px;
+                border-radius: 10px;
+                padding: 20px;
+            }
+            li{
+                list-style-type: square;
+            }
+        </style>
     </head>
     <body style="height: 9999px;">
     
-        <img src="pirates.jpg" style="max-height: 200px; width: 100%;"/>
+        <img src="city.jpg" style="max-height: 200px; width: 100%;"/>
 
         <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">JR BRAND</a>
@@ -34,12 +44,61 @@
             </div>
         </nav>
 
-        <div style="padding: 20px;">
-            <h2>INDEX!</h2>
+        <div style="padding: 20px;">            
+            <div class="row">            
+                <div class="col-md-6 box">
+                    <h2><img src="github-icon.png" style="height: 35px;"> Gists</h2>
+                    <span id="gists"></span>
+                </div>
+                <div class="col-md-6 box">
+                        <h2><img src="github-icon.png" style="height: 35px;"> Repos</h2>
+                    <span id="repos"></span>
+                </div>
+            </div>                            
         </div>
 
     </body>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        function getGists(){
+            var json_url = 'https://api.github.com/users/joswar84/gists';
+            $.ajax({
+            type: 'GET',
+            url: json_url,
+            dataType: 'json',
+                success: function(data){
+                    var dlen = data.length;
+                    for(i=0; i<dlen; i++){                        
+                        $.each(data[i].files, function(key, value){                                
+                            var url = data[1].html_url;                
+                            $("#gists").append("<li class='li-gh'><a href='" + url + "' target='_blank'>" + key + "</a></li>")
+                        });
+                    };            
+                }
+            });
+        }
+        getGists();
+
+        function getRepos(){
+            var json_url = 'https://api.github.com/users/joswar84/repos';
+            $.ajax({
+            type: 'GET',
+            url: json_url,
+            dataType: 'json',
+                success: function(data){
+                    console.log(data)
+                    var dlen = data.length;
+                    for(i=0; i<dlen; i++){                        
+                        title = data[i].name;                        
+                        url = data[i].html_url;
+                        console.log(url)
+                        $("#repos").append("<li><a href='" + url + "' target='_blank'>" + title + "</a></li>")
+                    };            
+                }
+            });
+        }
+        getRepos();
+    </script>
 </html>
