@@ -12,9 +12,6 @@
                 border-radius: 10px;
                 padding: 20px;
             }
-            li{
-                list-style-type: square;
-            }
         </style>
     </head>
     <body style="height: 9999px;">
@@ -30,10 +27,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Administration</a>
+                        <a class="nav-link" href="https://github.com/JoswaR84" target="_blank">GitHub</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Development</a>
+                        <a class="nav-link" href="https://www.linkedin.com/in/joshuaramczyk/" target="_blank">LinkedIn</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav mr-right">                
@@ -46,11 +43,11 @@
 
         <div style="padding: 20px;">            
             <div class="row">            
-                <div class="col-md-6 box">
+                <div class="col-md-4 box">
                     <h2><img src="github-icon.png" style="height: 35px;"> Gists</h2>
                     <span id="gists"></span>
                 </div>
-                <div class="col-md-6 box">
+                <div class="col-md-4 box">
                         <h2><img src="github-icon.png" style="height: 35px;"> Repos</h2>
                     <span id="repos"></span>
                 </div>
@@ -72,8 +69,8 @@
                     var dlen = data.length;
                     for(i=0; i<dlen; i++){                        
                         $.each(data[i].files, function(key, value){                                
-                            var url = data[1].html_url;                
-                            $("#gists").append("<li class='li-gh'><a href='" + url + "' target='_blank'>" + key + "</a></li>")
+                            var url = data[i].html_url;                
+                            $("#gists").append("<li><a href='" + url + "' target='_blank'>" + key + "</a></li>")
                         });
                     };            
                 }
