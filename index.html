@@ -104,10 +104,10 @@
         </div>
 
     </body>
-    <footer style="margin-bottom: 20px;">        
+    <footer style="margin-bottom: 20px;">
         <center>
             @ Joshua Ramczyk 2019
-        </center>        
+        </center>                       
     </footer>
 
     <!-- JS -->
@@ -135,6 +135,9 @@
                                 $("#gists").append("<li><a href='" + url + "' target='_blank'>" + art_name + "</a></li>")
                             });
                         };            
+                    },
+                    error: function(){
+                        $("#gists").append("Github API limit exceeded!")
                     }
                 });
             }
@@ -153,6 +156,9 @@
                             url = data[i].html_url;                                                
                             $("#repos").append("<li><a href='" + url + "' target='_blank'>" + title + "</a></li>")
                         };            
+                    },
+                    error: function(){
+                        $("#gists").append("Github API limit exceeded!")
                     }
                 });
             }
