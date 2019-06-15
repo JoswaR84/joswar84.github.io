@@ -1,0 +1,91 @@
+<html>
+<header>
+    <title>
+        JR's Farkle Game
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="css.css" />
+</header>
+<body>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container">
+                <h1><b>JR's Farkle Game</b><h1>
+                <input id="rules" class="btn btn-default navbar-btn" onclick="rules()" type="button" value="Farkle Rules"/>
+                <input id="start-game" class="btn btn-default navbar-btn" onclick="startGame()" type="button" value="Start Game"/>
+            </div>
+        </nav>
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div id="player1" class="player-info collapse">
+                Player 1
+                <br/>
+                <span id="player-score-spot1"></span>
+            </div>
+            <div id="player2" class="player-info collapse">
+                Player 2
+                <br/>
+                <span id="player-score-spot2"></span>
+            </div>
+            <div id="player3" class="player-info collapse">
+                Player 3
+                <br/>
+                <span id="player-score-spot3"></span>
+            </div>
+            <div id="player4" class="player-info collapse">
+                Player 4
+                <br/>
+                <span id="player-score-spot4"></span>
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-center">
+            <div id="player5" class="player-info collapse">
+                Player 5
+                <br/>
+                <span id="player-score-spot5"></span>
+            </div>
+            <div id="player6" class="player-info collapse">
+                Player 6
+                <br/>
+                <span id="player-score-spot6"></span>
+            </div>
+            <div id="player7" class="player-info collapse">
+                Player 7
+                <br/>
+                <span id="player-score-spot7"></span>
+            </div>
+            <div id="player8" class="player-info collapse">
+                Player 8
+                <br/>
+                <span id="player-score-spot8"></span>
+            </div>
+        </div>
+        <div class="row text-center align-items-center justify-content-center">
+            <div id="dice-bank" class="collapse">
+                Dice Bank
+                <br/>
+                <span id="dice-bank-spot"></span>
+            </div>
+        </div>         
+        <div id="game-area-row1" class="row text-center align-items-center justify-content-center">
+            <img id="die1" class="die-img" onclick="selectDice(this)" src="die1.png"/>
+            <img id="die2" class="die-img" onclick="selectDice(this)" src="die2.png"/>
+            <img id="die3" class="die-img" onclick="selectDice(this)" src="die3.png"/>
+        </div>
+        <div id="game-area-row2" class="row text-center align-items-center justify-content-center">
+            <img id="die4" class="die-img" onclick="selectDice(this)" src="die4.png"/>
+            <img id="die5" class="die-img" onclick="selectDice(this)" src="die5.png"/>
+            <img id="die6" class="die-img" onclick="selectDice(this)" src="die6.png"/>
+        </div>
+        <div id="action-bar" class="row text-center align-items-center justify-content-center">
+            <input id="roll-dice" class="action-btn collapse" onclick="rollDice()" type="button" value="Roll Dice"/>
+            <input id="bank-roll" class="action-btn collapse" onclick="bankRoll()" type="button" value="Bank Roll"/>
+            <input id="bank-dice" class="action-btn collapse" onclick="bankDice()" type="button" value="Bank Dice"/>
+        </div>
+    </div>
+</body>
+<script src="bootstrap.js"></script>
+<script src="jquery.js"></script>
+<script src="js.js"></script>
+</html>
