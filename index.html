@@ -3,25 +3,22 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>JR GitHub Page</title>
+        <title>Joshua Ramczyk</title>        
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+               
         <style>
-            .box{
-                border: lightgrey solid 1px;
-                border-radius: 10px;
-                padding: 20px;
+            .navbar{
+                background-color: #0F2848;
             }
         </style>
     </head>
-    <body>
-        
+    <body>        
         <!-- Banner -->
-        <img src="city.jpg" style="max-height: 200px; width: 100%;"/>
+        <img src="uni.jpg" style="max-height: 150px; width: 100%;"/>
 
         <!-- Navbar -->
-        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">JR BRAND</a>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">Joshua Ramczyk</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -29,52 +26,109 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/JoswaR84" target="_blank">GitHub</a>
+                        <a class="nav-link" href="https://github.com/JoswaR84" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.linkedin.com/in/joshuaramczyk/" target="_blank">LinkedIn</a>
+                        <a class="nav-link" href="https://www.linkedin.com/in/joshuaramczyk/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://trailhead.salesforce.com/en/me/joshuaramczyk" target="_blank"><i class="fab fa-salesforce"></i> Salesforce</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav mr-right">                
+                <ul class="navbar-nav mr-right">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/login">Login</a>
+                        <a class="nav-link" href="mailto:joswar84@gmail.com"><i class="far fa-envelope"></i> Contact Me</a>
+                    </li>          
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/login"><i class="fas fa-sign-in-alt"></i> Login</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
-        <!-- Github Lists -->
-        <div style="padding: 20px;">            
-            <div class="row">                        
+        <!-- Github Lists -->            
+        <div class="container" style="padding: 10px;">            
+            <div class="row">                                        
                 <div class="col-md-8">
-                    <span id="gists"></span>
-                </div>
-                <div class="col-md-3 box">
-                        <h2><img src="github-icon.png" style="height: 25px;"> Repos</h2>
-                    <span id="repos"></span>
-                </div>
+                    <div class="card" style="margin-bottom: 10px;">
+                        <div class="card-header">
+                            <h4 class="card-title"><i class="fas fa-code"></i> <b>About Me</b></h4>
+                        </div>
+                        <div class="card-body">  
+                            <img src="0.jpg" style="float: left; padding: 5px;"/>
+                            Customer service focused Technical Support Specialist with over five years experience in help desk & remote support environments. Over a year of experience as a fullstack web developer using the Django framework. Highly adept in data structures and algoritms, schema design, server configurations, systems diagnostics, and troubleshooting. Exhibit excellent organizational and problem-solving skills. Fiscally conscience to ensure operations are within budget and eliminate waste.
+                        </div>
+                    </div>
+                    <div class="card" style="margin-bottom: 10px;">
+                        <div class="card-header">
+                            <h4 class="card-title"><i class="fas fa-chart-line"></i> <b>Skills</b></h4>
+                        </div>
+                        <div class="card-body">  
+                            <ul style="list-style: none; font-weight: bold;">
+                                <li>
+                                    Python & Django Framework
+                                </li>      
+                                <li>
+                                    Javascript & jQuery
+                                </li>
+                                <li>
+                                    Linux, Nginx, & Postgres
+                                </li>
+                            </ul>
+                        </div>
+                    </div>                                     
+                    <div class="card" style="margin-bottom: 10px;">                
+                        <div class="card-header" data-toggle="collapse" href="#top-gist">
+                            <h4 class="card-title"><i class="fab fa-github"></i> <b>Github Gists</b></h4>
+                        </div>
+                        <div class="card-body collapse" id="top-gist">                            
+                            <span id="gists"></span>           
+                        </div>
+                    </div>                    
+                    <div class="card" style="margin-bottom: 10px;">                
+                        <div class="card-header" data-toggle="collapse" href="#tog-repo">
+                            <h4 class="card-title"><i class="fab fa-github"></i> <b>Github Repos</b></h4>
+                        </div>
+                        <div class="card-body collapse" id="tog-repo">                        
+                            <span id="repos"></span>                
+                        </div>
+                    </div>
+                </div>                
+                <div class="col-md-4">                    
+                    <a class="twitter-timeline" data-height="725" href="https://twitter.com/ThePSF"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+                </div>                               
             </div>                            
         </div>
 
     </body>
+    <footer style="margin-bottom: 20px;">        
+        <center>
+            @ Joshua Ramczyk 2019
+        </center>        
+    </footer>
 
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/9ac205e785.js"></script>
     <script>
+        
         function getGists(){
             var json_url = 'https://api.github.com/users/joswar84/gists';
             $.ajax({
             type: 'GET',
             url: json_url,
             dataType: 'json',
-                success: function(data){
+                success: function(data){                    
                     var dlen = data.length;
                     for(i=0; i<dlen; i++){                        
                         $.each(data[i].files, function(key, value){                                
-                            var url = data[i].html_url;                
-                            $("#gists").append("<li><a href='" + url + "' target='_blank'>" + key + "</a></li>")
+                            var url = data[i].html_url;
+                            var art_name = data[i].description;                                                                            
+                            var raw_url = data[i].files[art_name].raw_url;
+                            console.log(raw_url)
+                            $("#gists").append("<li><a href='" + url + "' target='_blank'>" + art_name + "</a></li>")
                         });
                     };            
                 }
@@ -88,13 +142,11 @@
             type: 'GET',
             url: json_url,
             dataType: 'json',
-                success: function(data){
-                    console.log(data)
+                success: function(data){                    
                     var dlen = data.length;
                     for(i=0; i<dlen; i++){                        
                         title = data[i].name;                        
-                        url = data[i].html_url;
-                        console.log(url)
+                        url = data[i].html_url;                                                
                         $("#repos").append("<li><a href='" + url + "' target='_blank'>" + title + "</a></li>")
                     };            
                 }
