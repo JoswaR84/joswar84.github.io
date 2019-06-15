@@ -57,19 +57,19 @@
             <div class="row">                                        
                 <div class="col-md-8">
                     <div class="card" style="margin-bottom: 10px;">
-                        <div class="card-header">
+                        <div class="card-header" data-toggle="collapse" href="#tog-about">
                             <h4 class="card-title"><i class="fas fa-code"></i> <b>About Me</b></h4>
                         </div>
-                        <div class="card-body">  
+                        <div class="card-body show" id="tog-about">  
                             <img src="0.jpg" style="float: left; padding: 5px;"/>
                             Customer service focused Technical Support Specialist with over five years experience in help desk & remote support environments. Over a year of experience as a fullstack web developer using the Django framework. Highly adept in data structures and algoritms, schema design, server configurations, systems diagnostics, and troubleshooting. Exhibit excellent organizational and problem-solving skills. Fiscally conscience to ensure operations are within budget and eliminate waste.
                         </div>
                     </div>
                     <div class="card" style="margin-bottom: 10px;">
-                        <div class="card-header">
+                        <div class="card-header" data-toggle="collapse" href="#tog-skill">
                             <h4 class="card-title"><i class="fas fa-chart-line"></i> <b>Skills</b></h4>
                         </div>
-                        <div class="card-body">  
+                        <div class="card-body show" id="tog-skill">  
                             <ul style="list-style: none; font-weight: bold;">
                                 <li>
                                     Python & Django Framework
@@ -87,16 +87,20 @@
                         <div class="card-header" data-toggle="collapse" href="#top-gist">
                             <h4 class="card-title"><i class="fab fa-github"></i> <b>Github Gists</b></h4>
                         </div>
-                        <div class="card-body collapse" id="top-gist">                            
-                            <span id="gists"></span>           
+                        <div class="card-body collapse" id="top-gist">
+                            <ul>
+                                <span id="gists"></span>
+                            </ul>                            
                         </div>
                     </div>                    
                     <div class="card" style="margin-bottom: 10px;">                
                         <div class="card-header" data-toggle="collapse" href="#tog-repo">
                             <h4 class="card-title"><i class="fab fa-github"></i> <b>Github Repos</b></h4>
                         </div>
-                        <div class="card-body collapse" id="tog-repo">                        
-                            <span id="repos"></span>                
+                        <div class="card-body collapse" id="tog-repo">
+                            <ul>
+                                <span id="repos"></span>                
+                            </ul>                       
                         </div>
                     </div>
                 </div>                
