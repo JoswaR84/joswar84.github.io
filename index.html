@@ -116,45 +116,48 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/9ac205e785.js"></script>
     <script>
-        
-        function getGists(){
-            var json_url = 'https://api.github.com/users/joswar84/gists';
-            $.ajax({
-            type: 'GET',
-            url: json_url,
-            dataType: 'json',
-                success: function(data){                    
-                    var dlen = data.length;
-                    for(i=0; i<dlen; i++){                        
-                        $.each(data[i].files, function(key, value){                                
-                            var url = data[i].html_url;
-                            var art_name = data[i].description;                                                                            
-                            var raw_url = data[i].files[art_name].raw_url;
-                            console.log(raw_url)
-                            $("#gists").append("<li><a href='" + url + "' target='_blank'>" + art_name + "</a></li>")
-                        });
-                    };            
-                }
-            });
-        }
-        getGists();
+        $(document).ready(function(){
 
-        function getRepos(){
-            var json_url = 'https://api.github.com/users/joswar84/repos';
-            $.ajax({
-            type: 'GET',
-            url: json_url,
-            dataType: 'json',
-                success: function(data){                    
-                    var dlen = data.length;
-                    for(i=0; i<dlen; i++){                        
-                        title = data[i].name;                        
-                        url = data[i].html_url;                                                
-                        $("#repos").append("<li><a href='" + url + "' target='_blank'>" + title + "</a></li>")
-                    };            
-                }
-            });
-        }
-        getRepos();
+            function getGists(){
+                var json_url = 'https://api.github.com/users/joswar84/gists';
+                $.ajax({
+                type: 'GET',
+                url: json_url,
+                dataType: 'json',
+                    success: function(data){                    
+                        var dlen = data.length;
+                        for(i=0; i<dlen; i++){                        
+                            $.each(data[i].files, function(key, value){                                
+                                var url = data[i].html_url;
+                                var art_name = data[i].description;                                                                            
+                                var raw_url = data[i].files[art_name].raw_url;
+                                console.log(raw_url)
+                                $("#gists").append("<li><a href='" + url + "' target='_blank'>" + art_name + "</a></li>")
+                            });
+                        };            
+                    }
+                });
+            }
+            getGists();
+        
+            function getRepos(){
+                var json_url = 'https://api.github.com/users/joswar84/repos';
+                $.ajax({
+                type: 'GET',
+                url: json_url,
+                dataType: 'json',
+                    success: function(data){                    
+                        var dlen = data.length;
+                        for(i=0; i<dlen; i++){                        
+                            title = data[i].name;                        
+                            url = data[i].html_url;                                                
+                            $("#repos").append("<li><a href='" + url + "' target='_blank'>" + title + "</a></li>")
+                        };            
+                    }
+                });
+            }
+            getRepos();
+        
+        });
     </script>
 </html>
